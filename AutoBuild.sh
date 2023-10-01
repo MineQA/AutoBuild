@@ -447,12 +447,7 @@ Make_Download() {
 		sleep 2
 		return
 	fi
-	if [[ $(NETWORK_CHECK 223.5.5.5) == 1 ]]
-	then
-		ECHO R "\n网络连接错误,执行失败!"
-		sleep 2
-		return
-	fi
+
 	clear
 	cd $2
 	ECHO X "开始执行 [make download] ...\n"
@@ -1272,12 +1267,7 @@ Sources_Update() {
 	then
 		return
 	fi
-	if [[ $(NETWORK_CHECK 223.5.5.5) == 1 ]]
-	then
-		ECHO R "\n网络连接错误, 更新失败!"
-		sleep 2
-		return
-	fi
+	
 	clear
 	Update_Logfile=${Home}/Log/Update_${2}_$(date +%Y%m%d-%H%M).log
 	cd ${Home}/Projects/$2
