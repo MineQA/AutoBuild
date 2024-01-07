@@ -410,7 +410,7 @@ Module_Updater() {
 		ECHO X "正在更新 [AutoBuild] 程序, 请稍后 ...\n"
 		if [[ ! $(ls -A ${Home}/Backups/AutoBuild-Update 2> /dev/null) ]]
 		then
-			git clone https://github.com/Hyy2001X/AutoBuild ${Home}/Backups/AutoBuild-Update
+			git clone https://github.com/MineQA/AutoBuild ${Home}/Backups/AutoBuild-Update
 		fi
 		cd ${Home}/Backups/AutoBuild-Update
 		Update_Logfile=${Home}/Log/Update_AutoBuild_$(date +%Y%m%d-%H%M).log
